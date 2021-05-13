@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nU2-A3-mF8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Xaz-Nq-gzG">
+            <objects>
+                <navigationController id="nU2-A3-mF8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" id="Q5o-NI-UuV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qdK-mI-b7B" kind="relationship" relationship="rootViewController" id="aMB-1l-iQ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Q2-7f-LgW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1407" y="-70"/>
+        </scene>
+        <!--Billio Pay View Controller-->
+        <scene sceneID="sqa-U8-3H6">
+            <objects>
+                <viewController storyboardIdentifier="BillioPayViewController" id="qdK-mI-b7B" customClass="BillioPayViewController" customModule="_billioSDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jNM-fK-TV6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="x1V-L2-DPc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qdK-mI-b7B" id="m47-Av-Scz"/>
+                                    <outlet property="delegate" destination="qdK-mI-b7B" id="k9H-en-B3t"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SFB-us-aih">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" red="0.40784313729999999" green="0.74509803919999995" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iOn-Rb-GfH"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SFB-us-aih" firstAttribute="centerX" secondItem="jNM-fK-TV6" secondAttribute="centerX" id="JLE-cv-TgT"/>
+                            <constraint firstAttribute="bottom" secondItem="x1V-L2-DPc" secondAttribute="bottom" id="MEc-B5-Z7n"/>
+                            <constraint firstItem="x1V-L2-DPc" firstAttribute="leading" secondItem="jNM-fK-TV6" secondAttribute="leading" id="a1B-Wm-jzm"/>
+                            <constraint firstItem="SFB-us-aih" firstAttribute="centerY" secondItem="jNM-fK-TV6" secondAttribute="centerY" id="cuK-nk-FZt"/>
+                            <constraint firstAttribute="trailing" secondItem="x1V-L2-DPc" secondAttribute="trailing" id="dN9-lp-eN4"/>
+                            <constraint firstItem="x1V-L2-DPc" firstAttribute="top" secondItem="iOn-Rb-GfH" secondAttribute="top" id="nBN-Si-0Sm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wod-SQ-5LA"/>
+                    <connections>
+                        <outlet property="tvPay" destination="x1V-L2-DPc" id="Spj-i1-pD2"/>
+                        <outlet property="vActivityIndicator" destination="SFB-us-aih" id="AeV-cO-FXL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1E-Zt-cc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-480" y="-69"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
