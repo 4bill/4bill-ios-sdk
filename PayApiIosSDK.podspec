@@ -34,7 +34,6 @@ Pod::Spec.new do |spec|
   spec.dependency 'QuickLayout'
   spec.dependency 'Marshal'
   spec.dependency 'Promises'
-  spec.dependency 'Bindy'
 
   spec.source_files = "pay-api-ios-sdk/**/*.{swift}"
   spec.xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
