@@ -1,13 +1,11 @@
 PODS:
   - Alamofire (5.4.3)
-  - Bindy (0.3.3)
   - Marshal (1.2.7)
   - Promises (2.0.4)
   - QuickLayout (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - Bindy
   - Marshal
   - Promises
   - QuickLayout
@@ -15,18 +13,16 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Bindy
     - Marshal
     - Promises
     - QuickLayout
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  Bindy: 77617145ae3a154e92b86fbcc8ec1cb8b1f438b4
   Marshal: ef480864a6af10a63f67be7e55bb5d8fe67a16d9
   Promises: fcb83dc6be43294a8d30c343636ed1a45a8d2e0a
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
 
-PODFILE CHECKSUM: 0339163ca907638df5d15e52c9a00b509ea9ac67
+PODFILE CHECKSUM: 1dccb4854b1b7572634c8bae9dcc06a68953c3da
 
 COCOAPODS: 1.10.1

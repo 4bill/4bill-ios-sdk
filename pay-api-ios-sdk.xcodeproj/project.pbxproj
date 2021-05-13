@@ -104,8 +104,6 @@
 		F1804D62264D70EA003D5340 /* RechabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C98264D70E9003D5340 /* RechabilityManager.swift */; };
 		F1804D63264D70EA003D5340 /* APIErrorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C99264D70E9003D5340 /* APIErrorValidator.swift */; };
 		F1804D64264D70EA003D5340 /* SerializerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C9A264D70E9003D5340 /* SerializerUtils.swift */; };
-		F1804D65264D70EA003D5340 /* Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C9C264D70E9003D5340 /* Binder.swift */; };
-		F1804D66264D70EA003D5340 /* ViewModelHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C9D264D70E9003D5340 /* ViewModelHandler.swift */; };
 		F1804D67264D70EA003D5340 /* APIResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C9E264D70E9003D5340 /* APIResponseValidator.swift */; };
 		F1804D68264D70EA003D5340 /* CancelTransactionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CA1264D70E9003D5340 /* CancelTransactionEndpoint.swift */; };
 		F1804D69264D70EA003D5340 /* PayTransactionEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CA2264D70E9003D5340 /* PayTransactionEndpoint.swift */; };
@@ -280,8 +278,6 @@
 		F1804C98264D70E9003D5340 /* RechabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RechabilityManager.swift; sourceTree = "<group>"; };
 		F1804C99264D70E9003D5340 /* APIErrorValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrorValidator.swift; sourceTree = "<group>"; };
 		F1804C9A264D70E9003D5340 /* SerializerUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializerUtils.swift; sourceTree = "<group>"; };
-		F1804C9C264D70E9003D5340 /* Binder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binder.swift; sourceTree = "<group>"; };
-		F1804C9D264D70E9003D5340 /* ViewModelHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelHandler.swift; sourceTree = "<group>"; };
 		F1804C9E264D70E9003D5340 /* APIResponseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseValidator.swift; sourceTree = "<group>"; };
 		F1804CA1264D70E9003D5340 /* CancelTransactionEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelTransactionEndpoint.swift; sourceTree = "<group>"; };
 		F1804CA2264D70E9003D5340 /* PayTransactionEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayTransactionEndpoint.swift; sourceTree = "<group>"; };
@@ -638,7 +634,6 @@
 				F1804C70264D70E9003D5340 /* APIConstants.swift */,
 				F1804C71264D70E9003D5340 /* Models */,
 				F1804C97264D70E9003D5340 /* Utilities */,
-				F1804C9B264D70E9003D5340 /* Common */,
 				F1804C9E264D70E9003D5340 /* APIResponseValidator.swift */,
 				F1804C9F264D70E9003D5340 /* Endpoint */,
 				F1804CB0264D70E9003D5340 /* Alamofire+NetworkClient.swift */,
@@ -762,15 +757,6 @@
 				F1804C9A264D70E9003D5340 /* SerializerUtils.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		F1804C9B264D70E9003D5340 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				F1804C9C264D70E9003D5340 /* Binder.swift */,
-				F1804C9D264D70E9003D5340 /* ViewModelHandler.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		F1804C9F264D70E9003D5340 /* Endpoint */ = {
@@ -1256,7 +1242,6 @@
 				F1804D43264D70EA003D5340 /* PayTransactionRequestData.swift in Sources */,
 				F1804DAC264D70EA003D5340 /* IPAdressHelper.swift in Sources */,
 				F1804D21264D70EA003D5340 /* UIView+RoundCorners.swift in Sources */,
-				F1804D66264D70EA003D5340 /* ViewModelHandler.swift in Sources */,
 				F1804D4A264D70EA003D5340 /* FindTransactionResponseData.swift in Sources */,
 				F1804D50264D70EA003D5340 /* PayPoint.swift in Sources */,
 				F1804D22264D70EA003D5340 /* UIView+NibLoaded.swift in Sources */,
@@ -1356,7 +1341,6 @@
 				F1804D41264D70EA003D5340 /* APIConstants.swift in Sources */,
 				F1804DAB264D70EA003D5340 /* CryptoHelper.swift in Sources */,
 				F1804D94264D70EA003D5340 /* BillioPayCardNameTableViewCell.swift in Sources */,
-				F1804D65264D70EA003D5340 /* Binder.swift in Sources */,
 				F1804D46264D70EA003D5340 /* PayTransactionResponseData.swift in Sources */,
 				F1804D49264D70EA003D5340 /* CancelTransactionRequestData.swift in Sources */,
 				F1804D63264D70EA003D5340 /* APIErrorValidator.swift in Sources */,

@@ -1,6 +1,0 @@
-module Bindy {
-  umbrella header "Bindy-umbrella.h"
-
-  export *
-  module * { export * }
-}
