@@ -26,3 +26,16 @@ extension CancelTransactionResponseData: Unmarshaling {
     }
     
 }
+
+//MARK: - JSONMarshaling
+extension CancelTransactionResponseData: JSONMarshaling {
+    
+    public func jsonObject() -> JSONObject {
+        return [
+            APIParameterName.id.rawValue        : self.id,
+            APIParameterName.isTest.rawValue    : self.isTest,
+            APIParameterName.status.rawValue    : self.status
+        ]
+    }
+    
+}

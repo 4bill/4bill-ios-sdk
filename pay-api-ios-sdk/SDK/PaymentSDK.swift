@@ -22,6 +22,8 @@ public protocol PaymentSDKDelegate: class {
     
     ///sdk did create transaction for card tokenization, p2p transfer, payment page services
     func paymentSDKDidCreateTransaction(with response: CreateTransactionResponseData)
+    
+    func paymentSDKDidCancelTransaction(with response: CancelTransactionResponseData)
 }
 
 extension PaymentSDKDelegate {
@@ -245,10 +247,6 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
         self.hostToHostService.updateTransaction(transactionID: transactionID, code: code, codeType: codeType)
     }
     
-    func getPayPoint() -> PayPoint {
-        return PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
-    }
-    
     public func presentPaymentController(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, controllerTitle: String?, style: UIModalPresentationStyle) {
         let controller = self.paymentControllerNavigation.rootViewController as! BillioPayViewController
         controller.externalTransactionID = externalTransactionID
@@ -266,6 +264,16 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
         self.navigation?.present(self.paymentControllerNavigation, animated: true) { [weak self] in
             self?.isPaymentNavigationPresented = true
         }
+    }
+    
+    public func cancelTransaction(transactionID: Int) {
+        self.cancelTransaction(transactionID: transactionID) { (response) in
+            self.delegate?.paymentSDKDidCancelTransaction(with: response)
+        }
+    }
+    
+    func getPayPoint() -> PayPoint {
+        return PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
     }
     
     //MARK: - Host-2-Host service
