@@ -28,7 +28,7 @@
         <!--Billio Pay View Controller-->
         <scene sceneID="sqa-U8-3H6">
             <objects>
-                <viewController storyboardIdentifier="BillioPayViewController" id="qdK-mI-b7B" customClass="BillioPayViewController" customModule="_billioSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BillioPayViewController" id="qdK-mI-b7B" customClass="BillioPayViewController" customModule="PayApiIosSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jNM-fK-TV6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

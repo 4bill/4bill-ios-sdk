@@ -134,10 +134,10 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     
     private var isPaymentNavigationPresented: Bool = false
     
-    weak var delegate: PaymentSDKDelegate?
+    public weak var delegate: PaymentSDKDelegate?
     
     ///delegate for host-2-host service
-    weak var hostToHostDelegate: HostToHostServiceDelegate? {
+    public weak var hostToHostDelegate: HostToHostServiceDelegate? {
         didSet {
             self.hostToHostService.delegate = self.hostToHostDelegate
         }
@@ -249,7 +249,7 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
         return PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
     }
     
-    func presentPaymentController(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, controllerTitle: String?, style: UIModalPresentationStyle) {
+    public func presentPaymentController(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, controllerTitle: String?, style: UIModalPresentationStyle) {
         let controller = self.paymentControllerNavigation.rootViewController as! BillioPayViewController
         controller.externalTransactionID = externalTransactionID
         controller.externalOrderID = externalOrderID
@@ -270,7 +270,8 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     
     //MARK: - Host-2-Host service
     
-    public func hostToHost(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, fields: HostToHostFields, point: PayPoint?) {
+    public func hostToHost(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, fields: HostToHostFields) {
+        let point = PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
         self.hostToHostService.hostToHost(externalTransactionID: externalTransactionID, externalOrderID: externalOrderID, externalCustomerID: externalCustomerID, amount: amount, amountCurrency: amountCurrency, serviceID: serviceID, description: description, fields: fields, point: point, locale: self.locale.rawValue)
     }
     
@@ -283,19 +284,19 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     
     //MARK: - Card to card transfer service
     
-    func p2pTransfer(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, recipientCardNumber: String, extra: JSONObject?) {
+    public func p2pTransfer(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, recipientCardNumber: String, extra: JSONObject?) {
         let point = PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
         self.cardToCardTransferService.p2pTransfer(locale: self.locale.rawValue, externalTransactionID: externalTransactionID, externalOrderID: externalOrderID, externalCustomerID: externalCustomerID, amount: amount, amountCurrency: amountCurrency, serviceID: serviceID, description: description, recipientCardNumber: recipientCardNumber, point: point, extra: extra)
     }
     
     //MARK: - Payment page service
     
-    func createPaymentPage(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, extra: JSONObject?, shouldTokenizeCard: Bool) {
+    public func createPaymentPage(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, extra: JSONObject?, shouldTokenizeCard: Bool) {
         let point = PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
         self.paymentPageService.createPayment(locale: self.locale.rawValue, externalTransactionID: externalTransactionID, externalOrderID: externalOrderID, externalCustomerID: externalCustomerID, amount: amount, amountCurrency: amountCurrency, serviceID: serviceID, description: description, point: point, extra: extra, shouldTokenizeCard: shouldTokenizeCard)
     }
     
-    func createPaymentPage(cardToken: String, externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, extra: JSONObject?) {
+    public func createPaymentPage(cardToken: String, externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, extra: JSONObject?) {
         let point = PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
         self.paymentPageService.createPayment(cardToken: cardToken, locale: self.locale.rawValue, externalTransactionID: externalTransactionID, externalOrderID: externalOrderID, externalCustomerID: externalCustomerID, amount: amount, amountCurrency: amountCurrency, serviceID: serviceID, description: description, point: point, extra: extra)
     }

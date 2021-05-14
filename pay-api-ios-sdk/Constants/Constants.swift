@@ -86,9 +86,12 @@ enum AnimationDuration {
 //MARK: - Images
 
 enum SDKImage {
-    static let camera: UIImage? = UIImage(named: "sdk_icon_camera")
-    static let dropDown: UIImage? = UIImage(named: "sdk_icon_drop_down")
-    static let info: UIImage? = UIImage(named: "sdk_icon_info")
+//    static let camera: UIImage? = UIImage(named: "sdk_icon_camera")
+//    static let dropDown: UIImage? = UIImage(named: "sdk_icon_drop_down")
+//    static let info: UIImage? = UIImage(named: "sdk_icon_info")
+    static let camera: UIImage? = UIImage(named: "sdk_icon_camera", in: BundleHelper.bundle, with: nil)
+    static let dropDown: UIImage? = UIImage(named: "sdk_icon_drop_down", in: BundleHelper.bundle, with: nil)
+    static let info: UIImage? = UIImage(named: "sdk_icon_info", in: BundleHelper.bundle, with: nil)
 }
 
 //MARK: - Buttons
@@ -180,7 +183,7 @@ public enum VerificationCode {
     case lookUpCode
     case otp
     
-    var title: String {
+    public var title: String {
         switch self {
         case .lookUpCode:
             return "Look up code"

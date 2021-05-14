@@ -13,6 +13,10 @@ class BillioPayCompaniesTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     
+    @IBOutlet weak private var ivMastercard: UIImageView!
+    @IBOutlet weak private var ivVisa: UIImageView!
+    @IBOutlet weak private var ivPci: UIImageView!
+    
     //MARK: - Lifecycle
     
     override func awakeFromNib() {

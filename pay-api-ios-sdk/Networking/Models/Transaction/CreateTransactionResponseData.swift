@@ -10,26 +10,26 @@ import Marshal
 
 public struct CreateTransactionResponseData {
         
-    let amount: Int
-    var amountCurrency: String?
-    var externalCustomerID: String?
-    var externalTransactionID: String?
-    var externalOrderID: String?
-    let id: Int
-    let isTest: Bool
-    let accountID: Int
-    let pointID: Int
-    let serviceID: Int
-    let walletID: Int
+    public let amount: Int
+    public var amountCurrency: String?
+    public var externalCustomerID: String?
+    public var externalTransactionID: String?
+    public var externalOrderID: String?
+    public let id: Int
+    public let isTest: Bool
+    public let accountID: Int
+    public let pointID: Int
+    public let serviceID: Int
+    public let walletID: Int
     
-    var resultBool: Bool?
-    var result: JSONObject?
+    public var resultBool: Bool?
+    public var result: JSONObject?
     
-    let status: Int
-    var statusDescription: String?
+    public let status: Int
+    public var statusDescription: String?
     
-    var failureReasonCode: Int?
-    var failureReasonMessage: String?
+    public var failureReasonCode: Int?
+    public var failureReasonMessage: String?
     
 }
 

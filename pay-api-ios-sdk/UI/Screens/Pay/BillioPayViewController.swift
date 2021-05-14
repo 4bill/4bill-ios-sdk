@@ -146,7 +146,7 @@ public class BillioPayViewController: BillioBaseViewController {
         }
         let point = PaymentSDK.shared.getPayPoint()
         self.startLoading()
-        PaymentSDK.shared.hostToHost(externalTransactionID: externalTransactionID, externalOrderID: self.externalOrderID, externalCustomerID: self.externalCustomerID, amount: amount, amountCurrency: currency, serviceID: serviceID, description: self.transactionDescription, fields: fields, point: point)
+        PaymentSDK.shared.hostToHost(externalTransactionID: externalTransactionID, externalOrderID: self.externalOrderID, externalCustomerID: self.externalCustomerID, amount: amount, amountCurrency: currency, serviceID: serviceID, description: self.transactionDescription, fields: fields)
     }
     
     func saveCard() {

@@ -10,17 +10,17 @@ import Marshal
 
 public struct PayTransactionResponseData {
         
-    let id: Int
-    let isTest: Bool
+    public let id: Int
+    public let isTest: Bool
     
-    var resultBool: Bool?
-    var result: JSONObject?
+    public var resultBool: Bool?
+    public var result: JSONObject?
     
-    let status: Int
-    let statusDescription: String
+    public let status: Int
+    public let statusDescription: String
     
-    var failureReasonCode: Int?
-    var failureReasonMessage: String?
+    public var failureReasonCode: Int?
+    public var failureReasonMessage: String?
     
 }
 

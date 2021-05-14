@@ -10,17 +10,17 @@ import Marshal
 
 public struct UpdateTransactionResponseData {
         
-    let id: Int
-    let isTest: Bool
+    public let id: Int
+    public let isTest: Bool
     
-    var boolResult: Bool?
-    var result: JSONObject?
+    public var boolResult: Bool?
+    public var result: JSONObject?
     
-    let status: Int
-    let statusDescription: String
+    public let status: Int
+    public let statusDescription: String
     
-    var failureReasonCode: Int?
-    var failureReasonMessage: String?
+    public var failureReasonCode: Int?
+    public var failureReasonMessage: String?
     
     
 }

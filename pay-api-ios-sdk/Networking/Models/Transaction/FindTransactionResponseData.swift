@@ -10,34 +10,34 @@ import Marshal
 
 public struct FindTransactionResponseData {
         
-    let accountID: Int
+    public let accountID: Int
     
-    var accountWalletAmount: Int?
-    let accountWalletCurrency: String
+    public var accountWalletAmount: Int?
+    public let accountWalletCurrency: String
     
-    let amount: Int
-    var amountCurrency: String?
+    public let amount: Int
+    public var amountCurrency: String?
     
-    let created: String
-    var description: String?
-    var externalCustomerID: String?
-    var externalOrderID: String?
-    var externalTransectionID: String?
+    public let created: String
+    public var description: String?
+    public var externalCustomerID: String?
+    public var externalOrderID: String?
+    public var externalTransectionID: String?
     
-    let id: Int
-    let isTest: Bool
-    let pointID: Int
-    let serviceID: Int
-    let walletID: Int
-    let status: Int
-    let statusDescription: String
+    public let id: Int
+    public let isTest: Bool
+    public let pointID: Int
+    public let serviceID: Int
+    public let walletID: Int
+    public let status: Int
+    public let statusDescription: String
     
-    var failureReasonCode: Int?
-    var failureReasonMessage: String?
+    public var failureReasonCode: Int?
+    public var failureReasonMessage: String?
     
-    let extra: JSONObject
-    let fields: JSONObject
-    var authorization: JSONObject?
+    public let extra: JSONObject
+    public let fields: JSONObject
+    public var authorization: JSONObject?
 }
 
 //MARK: - Unmarshaling

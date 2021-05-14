@@ -10,7 +10,7 @@
         <!--Billio Card Scanner View Controller-->
         <scene sceneID="hdS-tO-45h">
             <objects>
-                <viewController storyboardIdentifier="BillioCardScannerViewController" id="s5u-81-V6w" customClass="BillioCardScannerViewController" customModule="_billioSDK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BillioCardScannerViewController" id="s5u-81-V6w" customClass="BillioCardScannerViewController" customModule="PayApiIosSDK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IQ-UD-u9P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

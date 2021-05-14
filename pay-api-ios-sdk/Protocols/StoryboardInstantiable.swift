@@ -16,12 +16,12 @@ protocol StoryboardInstantiable: class {
 extension StoryboardInstantiable where Self: UIViewController {
     
     static func storyboardInstance() -> Self? {
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let storyboard = UIStoryboard(name: storyboardName, bundle: BundleHelper.bundle)
         return storyboard.instantiateViewController(withIdentifier: String(describing: Self.self)) as? Self
     }
     
     static func navigationController() -> UINavigationController? {
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let storyboard = UIStoryboard(name: storyboardName, bundle: BundleHelper.bundle)
         return storyboard.instantiateInitialViewController()
     }
     

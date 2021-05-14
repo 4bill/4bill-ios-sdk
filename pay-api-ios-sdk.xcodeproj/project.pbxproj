@@ -142,25 +142,16 @@
 		F1804D8A264D70EA003D5340 /* BillioPayViewController+CellsDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CD0264D70EA003D5340 /* BillioPayViewController+CellsDelegates.swift */; };
 		F1804D8B264D70EA003D5340 /* BillioPayViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CD1264D70EA003D5340 /* BillioPayViewController+UITableView.swift */; };
 		F1804D8C264D70EA003D5340 /* BillioPayActionButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CD4264D70EA003D5340 /* BillioPayActionButtonTableViewCell.swift */; };
-		F1804D8D264D70EA003D5340 /* BillioPayActionButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CD5264D70EA003D5340 /* BillioPayActionButtonTableViewCell.xib */; };
 		F1804D8E264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CD7264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.swift */; };
-		F1804D8F264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CD8264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.xib */; };
 		F1804D90264D70EA003D5340 /* BillioPayCardDatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CDA264D70EA003D5340 /* BillioPayCardDatesTableViewCell.swift */; };
-		F1804D91264D70EA003D5340 /* BillioPayCardDatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CDB264D70EA003D5340 /* BillioPayCardDatesTableViewCell.xib */; };
 		F1804D92264D70EA003D5340 /* BillioPayCompaniesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CDD264D70EA003D5340 /* BillioPayCompaniesTableViewCell.swift */; };
-		F1804D93264D70EA003D5340 /* BillioPayCompaniesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CDE264D70EA003D5340 /* BillioPayCompaniesTableViewCell.xib */; };
 		F1804D94264D70EA003D5340 /* BillioPayCardNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CE0264D70EA003D5340 /* BillioPayCardNameTableViewCell.swift */; };
-		F1804D95264D70EA003D5340 /* BillioPayCardNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CE1264D70EA003D5340 /* BillioPayCardNameTableViewCell.xib */; };
 		F1804D96264D70EA003D5340 /* BillioPayCardNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CE3264D70EA003D5340 /* BillioPayCardNumberTableViewCell.swift */; };
-		F1804D97264D70EA003D5340 /* BillioPayCardNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CE4264D70EA003D5340 /* BillioPayCardNumberTableViewCell.xib */; };
 		F1804D98264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CE6264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.swift */; };
-		F1804D99264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CE7264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.xib */; };
-		F1804D9A264D70EA003D5340 /* BillioPayCardCVVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CE9264D70EA003D5340 /* BillioPayCardCVVTableViewCell.xib */; };
 		F1804D9B264D70EA003D5340 /* BillioPayCardCVVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CEA264D70EA003D5340 /* BillioPayCardCVVTableViewCell.swift */; };
 		F1804D9C264D70EA003D5340 /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1804CEC264D70EA003D5340 /* Scanner.storyboard */; };
 		F1804D9D264D70EA003D5340 /* BillioCardScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CED264D70EA003D5340 /* BillioCardScannerViewController.swift */; };
 		F1804D9E264D70EA003D5340 /* BorderedTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CF0264D70EA003D5340 /* BorderedTextFieldView.swift */; };
-		F1804D9F264D70EA003D5340 /* BorderedTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1804CF1264D70EA003D5340 /* BorderedTextFieldView.xib */; };
 		F1804DA0264D70EA003D5340 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CF4264D70EA003D5340 /* BorderedButton.swift */; };
 		F1804DA1264D70EA003D5340 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CF5264D70EA003D5340 /* RoundedButton.swift */; };
 		F1804DA2264D70EA003D5340 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804CF6264D70EA003D5340 /* BaseButton.swift */; };
@@ -174,6 +165,16 @@
 		F1804DAA264D70EA003D5340 /* PayerSDKHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804D03264D70EA003D5340 /* PayerSDKHelper.swift */; };
 		F1804DAB264D70EA003D5340 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804D04264D70EA003D5340 /* CryptoHelper.swift */; };
 		F1804DAC264D70EA003D5340 /* IPAdressHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804D05264D70EA003D5340 /* IPAdressHelper.swift */; };
+		F1A55EEF264E759E00A55D85 /* BorderedTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55EEE264E759D00A55D85 /* BorderedTextFieldView.xib */; };
+		F1A55F0E264E793000A55D85 /* BillioPayCompaniesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F06264E793000A55D85 /* BillioPayCompaniesTableViewCell.xib */; };
+		F1A55F0F264E793000A55D85 /* BillioPayCardNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F07264E793000A55D85 /* BillioPayCardNameTableViewCell.xib */; };
+		F1A55F10264E793000A55D85 /* BillioPayCardDatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F08264E793000A55D85 /* BillioPayCardDatesTableViewCell.xib */; };
+		F1A55F11264E793000A55D85 /* BillioPayCardCVVTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F09264E793000A55D85 /* BillioPayCardCVVTableViewCell.xib */; };
+		F1A55F12264E793000A55D85 /* BillioPayGeneralSumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F0A264E793000A55D85 /* BillioPayGeneralSumTableViewCell.xib */; };
+		F1A55F13264E793000A55D85 /* BillioPayGeneralTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F0B264E793000A55D85 /* BillioPayGeneralTitleTableViewCell.xib */; };
+		F1A55F14264E793000A55D85 /* BillioPayCardNumberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F0C264E793000A55D85 /* BillioPayCardNumberTableViewCell.xib */; };
+		F1A55F15264E793000A55D85 /* BillioPayActionButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1A55F0D264E793000A55D85 /* BillioPayActionButtonTableViewCell.xib */; };
+		F1A55F34264E7D1300A55D85 /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A55F33264E7D1300A55D85 /* BundleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -316,25 +317,16 @@
 		F1804CD0264D70EA003D5340 /* BillioPayViewController+CellsDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BillioPayViewController+CellsDelegates.swift"; sourceTree = "<group>"; };
 		F1804CD1264D70EA003D5340 /* BillioPayViewController+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BillioPayViewController+UITableView.swift"; sourceTree = "<group>"; };
 		F1804CD4264D70EA003D5340 /* BillioPayActionButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayActionButtonTableViewCell.swift; sourceTree = "<group>"; };
-		F1804CD5264D70EA003D5340 /* BillioPayActionButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayActionButtonTableViewCell.xib; sourceTree = "<group>"; };
 		F1804CD7264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayGeneralSumTableViewCell.swift; sourceTree = "<group>"; };
-		F1804CD8264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayGeneralSumTableViewCell.xib; sourceTree = "<group>"; };
 		F1804CDA264D70EA003D5340 /* BillioPayCardDatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayCardDatesTableViewCell.swift; sourceTree = "<group>"; };
-		F1804CDB264D70EA003D5340 /* BillioPayCardDatesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardDatesTableViewCell.xib; sourceTree = "<group>"; };
 		F1804CDD264D70EA003D5340 /* BillioPayCompaniesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayCompaniesTableViewCell.swift; sourceTree = "<group>"; };
-		F1804CDE264D70EA003D5340 /* BillioPayCompaniesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCompaniesTableViewCell.xib; sourceTree = "<group>"; };
 		F1804CE0264D70EA003D5340 /* BillioPayCardNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayCardNameTableViewCell.swift; sourceTree = "<group>"; };
-		F1804CE1264D70EA003D5340 /* BillioPayCardNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardNameTableViewCell.xib; sourceTree = "<group>"; };
 		F1804CE3264D70EA003D5340 /* BillioPayCardNumberTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayCardNumberTableViewCell.swift; sourceTree = "<group>"; };
-		F1804CE4264D70EA003D5340 /* BillioPayCardNumberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardNumberTableViewCell.xib; sourceTree = "<group>"; };
 		F1804CE6264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayGeneralTitleTableViewCell.swift; sourceTree = "<group>"; };
-		F1804CE7264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayGeneralTitleTableViewCell.xib; sourceTree = "<group>"; };
-		F1804CE9264D70EA003D5340 /* BillioPayCardCVVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardCVVTableViewCell.xib; sourceTree = "<group>"; };
 		F1804CEA264D70EA003D5340 /* BillioPayCardCVVTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioPayCardCVVTableViewCell.swift; sourceTree = "<group>"; };
 		F1804CEC264D70EA003D5340 /* Scanner.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		F1804CED264D70EA003D5340 /* BillioCardScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillioCardScannerViewController.swift; sourceTree = "<group>"; };
 		F1804CF0264D70EA003D5340 /* BorderedTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedTextFieldView.swift; sourceTree = "<group>"; };
-		F1804CF1264D70EA003D5340 /* BorderedTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BorderedTextFieldView.xib; sourceTree = "<group>"; };
 		F1804CF4264D70EA003D5340 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		F1804CF5264D70EA003D5340 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		F1804CF6264D70EA003D5340 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -348,6 +340,16 @@
 		F1804D03264D70EA003D5340 /* PayerSDKHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayerSDKHelper.swift; sourceTree = "<group>"; };
 		F1804D04264D70EA003D5340 /* CryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		F1804D05264D70EA003D5340 /* IPAdressHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPAdressHelper.swift; sourceTree = "<group>"; };
+		F1A55EEE264E759D00A55D85 /* BorderedTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BorderedTextFieldView.xib; sourceTree = "<group>"; };
+		F1A55F06264E793000A55D85 /* BillioPayCompaniesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCompaniesTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F07264E793000A55D85 /* BillioPayCardNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardNameTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F08264E793000A55D85 /* BillioPayCardDatesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardDatesTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F09264E793000A55D85 /* BillioPayCardCVVTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardCVVTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F0A264E793000A55D85 /* BillioPayGeneralSumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayGeneralSumTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F0B264E793000A55D85 /* BillioPayGeneralTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayGeneralTitleTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F0C264E793000A55D85 /* BillioPayCardNumberTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayCardNumberTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F0D264E793000A55D85 /* BillioPayActionButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillioPayActionButtonTableViewCell.xib; sourceTree = "<group>"; };
+		F1A55F33264E7D1300A55D85 /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -856,6 +858,7 @@
 		F1804CC5264D70EA003D5340 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F1A55EED264E759D00A55D85 /* Xibs */,
 				F1804CC6264D70EA003D5340 /* Screens */,
 				F1804CEE264D70EA003D5340 /* Views */,
 				F1804CF2264D70EA003D5340 /* Base */,
@@ -930,7 +933,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CD4264D70EA003D5340 /* BillioPayActionButtonTableViewCell.swift */,
-				F1804CD5264D70EA003D5340 /* BillioPayActionButtonTableViewCell.xib */,
 			);
 			path = BillioPayActionButtonTableViewCell;
 			sourceTree = "<group>";
@@ -939,7 +941,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CD7264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.swift */,
-				F1804CD8264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.xib */,
 			);
 			path = BillioPayGeneralSumTableViewCell;
 			sourceTree = "<group>";
@@ -948,7 +949,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CDA264D70EA003D5340 /* BillioPayCardDatesTableViewCell.swift */,
-				F1804CDB264D70EA003D5340 /* BillioPayCardDatesTableViewCell.xib */,
 			);
 			path = BillioPayCardDatesTableViewCell;
 			sourceTree = "<group>";
@@ -957,7 +957,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CDD264D70EA003D5340 /* BillioPayCompaniesTableViewCell.swift */,
-				F1804CDE264D70EA003D5340 /* BillioPayCompaniesTableViewCell.xib */,
 			);
 			path = BillioPayCompaniesTableViewCell;
 			sourceTree = "<group>";
@@ -966,7 +965,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CE0264D70EA003D5340 /* BillioPayCardNameTableViewCell.swift */,
-				F1804CE1264D70EA003D5340 /* BillioPayCardNameTableViewCell.xib */,
 			);
 			path = BillioPayCardNameTableViewCell;
 			sourceTree = "<group>";
@@ -975,7 +973,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CE3264D70EA003D5340 /* BillioPayCardNumberTableViewCell.swift */,
-				F1804CE4264D70EA003D5340 /* BillioPayCardNumberTableViewCell.xib */,
 			);
 			path = BillioPayCardNumberTableViewCell;
 			sourceTree = "<group>";
@@ -984,7 +981,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CE6264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.swift */,
-				F1804CE7264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.xib */,
 			);
 			path = BillioPayGeneralTitleTableViewCell;
 			sourceTree = "<group>";
@@ -992,7 +988,6 @@
 		F1804CE8264D70EA003D5340 /* BillioPayCardCVVTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				F1804CE9264D70EA003D5340 /* BillioPayCardCVVTableViewCell.xib */,
 				F1804CEA264D70EA003D5340 /* BillioPayCardCVVTableViewCell.swift */,
 			);
 			path = BillioPayCardCVVTableViewCell;
@@ -1019,7 +1014,6 @@
 			isa = PBXGroup;
 			children = (
 				F1804CF0264D70EA003D5340 /* BorderedTextFieldView.swift */,
-				F1804CF1264D70EA003D5340 /* BorderedTextFieldView.xib */,
 			);
 			path = BorderedTextFieldView;
 			sourceTree = "<group>";
@@ -1087,8 +1081,25 @@
 				F1804D03264D70EA003D5340 /* PayerSDKHelper.swift */,
 				F1804D04264D70EA003D5340 /* CryptoHelper.swift */,
 				F1804D05264D70EA003D5340 /* IPAdressHelper.swift */,
+				F1A55F33264E7D1300A55D85 /* BundleHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F1A55EED264E759D00A55D85 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				F1A55F0D264E793000A55D85 /* BillioPayActionButtonTableViewCell.xib */,
+				F1A55F09264E793000A55D85 /* BillioPayCardCVVTableViewCell.xib */,
+				F1A55F08264E793000A55D85 /* BillioPayCardDatesTableViewCell.xib */,
+				F1A55F07264E793000A55D85 /* BillioPayCardNameTableViewCell.xib */,
+				F1A55F0C264E793000A55D85 /* BillioPayCardNumberTableViewCell.xib */,
+				F1A55F06264E793000A55D85 /* BillioPayCompaniesTableViewCell.xib */,
+				F1A55F0A264E793000A55D85 /* BillioPayGeneralSumTableViewCell.xib */,
+				F1A55F0B264E793000A55D85 /* BillioPayGeneralTitleTableViewCell.xib */,
+				F1A55EEE264E759D00A55D85 /* BorderedTextFieldView.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1160,36 +1171,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1804D97264D70EA003D5340 /* BillioPayCardNumberTableViewCell.xib in Resources */,
 				F1804D11264D70EA003D5340 /* SF-Pro-Display-Medium.otf in Resources */,
 				F1804D0D264D70EA003D5340 /* SF-Pro-Display-RegularItalic.otf in Resources */,
-				F1804D8D264D70EA003D5340 /* BillioPayActionButtonTableViewCell.xib in Resources */,
+				F1A55F0F264E793000A55D85 /* BillioPayCardNameTableViewCell.xib in Resources */,
 				F1804D18264D70EA003D5340 /* SF-Pro-Display-LightItalic.otf in Resources */,
 				F1804D13264D70EA003D5340 /* SF-Pro-Display-Semibold.otf in Resources */,
 				F1804D1B264D70EA003D5340 /* SF-Pro-Display-ThinItalic.otf in Resources */,
 				F1804D89264D70EA003D5340 /* Pay.storyboard in Resources */,
 				F1804D0E264D70EA003D5340 /* SF-Pro-Display-Light.otf in Resources */,
-				F1804D8F264D70EA003D5340 /* BillioPayGeneralSumTableViewCell.xib in Resources */,
 				F1804D0B264D70EA003D5340 /* SF-Pro-Display-Thin.otf in Resources */,
 				F1804D0A264D70EA003D5340 /* Roboto-Medium.ttf in Resources */,
 				F1804D14264D70EA003D5340 /* SF-Pro-Display-MediumItalic.otf in Resources */,
+				F1A55F10264E793000A55D85 /* BillioPayCardDatesTableViewCell.xib in Resources */,
 				F1804D17264D70EA003D5340 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				F1A55F11264E793000A55D85 /* BillioPayCardCVVTableViewCell.xib in Resources */,
 				F1804D15264D70EA003D5340 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				F1804D85264D70EA003D5340 /* Web.storyboard in Resources */,
 				F1804D10264D70EA003D5340 /* SF-Pro-Display-Bold.otf in Resources */,
 				F1804D0F264D70EA003D5340 /* SF-Pro-Display-Regular.otf in Resources */,
-				F1804D99264D70EA003D5340 /* BillioPayGeneralTitleTableViewCell.xib in Resources */,
-				F1804D93264D70EA003D5340 /* BillioPayCompaniesTableViewCell.xib in Resources */,
+				F1A55F14264E793000A55D85 /* BillioPayCardNumberTableViewCell.xib in Resources */,
 				F1804D0C264D70EA003D5340 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
-				F1804D9F264D70EA003D5340 /* BorderedTextFieldView.xib in Resources */,
+				F1A55EEF264E759E00A55D85 /* BorderedTextFieldView.xib in Resources */,
 				F1804D81264D70EA003D5340 /* Assets.xcassets in Resources */,
 				F1804D1C264D70EA003D5340 /* SF-Pro-Display-BoldItalic.otf in Resources */,
-				F1804D9A264D70EA003D5340 /* BillioPayCardCVVTableViewCell.xib in Resources */,
-				F1804D95264D70EA003D5340 /* BillioPayCardNameTableViewCell.xib in Resources */,
-				F1804D91264D70EA003D5340 /* BillioPayCardDatesTableViewCell.xib in Resources */,
+				F1A55F12264E793000A55D85 /* BillioPayGeneralSumTableViewCell.xib in Resources */,
+				F1A55F13264E793000A55D85 /* BillioPayGeneralTitleTableViewCell.xib in Resources */,
+				F1A55F15264E793000A55D85 /* BillioPayActionButtonTableViewCell.xib in Resources */,
 				F1804D9C264D70EA003D5340 /* Scanner.storyboard in Resources */,
 				F1804D12264D70EA003D5340 /* SF-Pro-Display-Heavy.otf in Resources */,
 				F1804D16264D70EA003D5340 /* SF-Pro-Display-Ultralight.otf in Resources */,
+				F1A55F0E264E793000A55D85 /* BillioPayCompaniesTableViewCell.xib in Resources */,
 				F1804D1A264D70EA003D5340 /* SF-Pro-Display-Black.otf in Resources */,
 				F1804D19264D70EA003D5340 /* SF-Pro-Display-BlackItalic.otf in Resources */,
 			);
@@ -1266,6 +1277,7 @@
 				F1804D70264D70EA003D5340 /* APIEndpoint.swift in Sources */,
 				F1804D48264D70EA003D5340 /* UpdateTransactionRequestData.swift in Sources */,
 				F1804D34264D70EA003D5340 /* NetworkHandling.swift in Sources */,
+				F1A55F34264E7D1300A55D85 /* BundleHelper.swift in Sources */,
 				F1804D96264D70EA003D5340 /* BillioPayCardNumberTableViewCell.swift in Sources */,
 				F1804D2D264D70EA003D5340 /* UINavigationController+AlertController.swift in Sources */,
 				F1804D27264D70EA003D5340 /* UINavigationBar+Sizes.swift in Sources */,

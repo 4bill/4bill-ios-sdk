@@ -10,10 +10,17 @@ import Marshal
 
 public struct HostToHostFields {
     
-    let cardNumber: String
-    let expireYear: String
-    let expireMonth: String
-    let cvv: String
+    public let cardNumber: String
+    public let expireYear: String
+    public let expireMonth: String
+    public let cvv: String
+    
+    public init(cardNumber: String, expireYear: String, expireMonth: String, cvv: String) {
+        self.cardNumber = cardNumber
+        self.expireYear = expireYear
+        self.expireMonth = expireMonth
+        self.cvv = cvv
+    }
     
 }
 

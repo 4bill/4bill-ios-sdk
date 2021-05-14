@@ -11,13 +11,13 @@ extension UICollectionView {
     
     func registerCells<T: AutoIndentifierCell>(cells: [T.Type]) {
         for cell in cells {
-            self.register(UINib(nibName: cell.nibName, bundle: nil), forCellWithReuseIdentifier: cell.identifier)
+            self.register(UINib(nibName: cell.nibName, bundle: BundleHelper.bundle), forCellWithReuseIdentifier: cell.identifier)
         }
     }
     
     func register(cells: [AutoIndentifierCell.Type]) {
         for cell in cells {
-            self.register(UINib(nibName: cell.nibName, bundle: nil), forCellWithReuseIdentifier: cell.identifier)
+            self.register(UINib(nibName: cell.nibName, bundle: BundleHelper.bundle), forCellWithReuseIdentifier: cell.identifier)
         }
     }
     
