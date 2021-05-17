@@ -1,0 +1,10 @@
+.DS_Store
+# CocoaPods
+Pods
+
+# User settings
+xcuserdata/*
+UserInterfaceState.xcuserstate
+*.plist
+Podfile.lock
+Breakpoints_v2.xcbkptlist
