@@ -267,13 +267,7 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
             self?.isPaymentNavigationPresented = true
         }
     }
-    
-    public func cancelTransaction(transactionID: Int) {
-        self.cancelTransaction(transactionID: transactionID) { (response) in
-            self.delegate?.paymentSDKDidCancelTransaction(with: response)
-        }
-    }
-    
+
     func getPayPoint() -> PayPoint {
         return PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
     }
@@ -309,6 +303,33 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     public func createPaymentPage(cardToken: String, externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, extra: JSONObject?) {
         let point = PayPoint(callbackURL: self.callBackUrl?.description, successURL: self.successUrl?.description, failURL: self.failureUrl?.description, cancelURL: self.cancelUrl?.description, returnURL: self.returnUrl?.description)
         self.paymentPageService.createPayment(cardToken: cardToken, locale: self.locale.rawValue, externalTransactionID: externalTransactionID, externalOrderID: externalOrderID, externalCustomerID: externalCustomerID, amount: amount, amountCurrency: amountCurrency, serviceID: serviceID, description: description, point: point, extra: extra)
+    }
+    
+    //MARK: - Additional
+    
+    public func createTransaction(externalTransactionID: String, externalOrderID: String?, externalCustomerID: String?, amount: Int, amountCurrency: String, serviceID: Int, description: String?, fields: JSONObject?, extra: JSONObject?, completion: @escaping(CreateTransactionResponseData) -> ()) {
+        guard let ip = IPAdressHelper.shared.getWiFiAddress(),
+              let accountID = Core.shared.authManager.getAccountID(),
+              let walletID = Core.shared.authManager.getWalletID()
+              else {
+            return
+        }
+        let point = self.getPayPoint()
+        self.transactionNetworkComponent.createTransaction(locale: self.locale.rawValue, externalTransactionID: externalTransactionID, externalOrderID: externalOrderID, externalCustomerID: externalCustomerID, customerIPAdress: ip, amount: amount, amountCurrency: amountCurrency, serviceID: serviceID, accountID: accountID, walletID: walletID, description: description, fields: fields, point: point, extra: extra, completion: completion) 
+    }
+    
+    public func cancelTransaction(transactionID: Int) {
+        self.cancelTransaction(transactionID: transactionID) { (response) in
+            self.delegate?.paymentSDKDidCancelTransaction(with: response)
+        }
+    }
+    
+    public func updateTransaction(transactionID: Int, auth: AuthorizationData, completion: @escaping(UpdateTransactionResponseData) -> ()) {
+        self.transactionNetworkComponent.updateTransaction(transactionID: transactionID, authData: auth, completion: completion)
+    }
+    
+    public func findTransaction(transactionID: Int, externalTransactionID: String?, completion: @escaping(FindTransactionResponseData) -> ()) {
+        self.transactionNetworkComponent.findTransaction(transactionID: transactionID, externalTransactionID: externalTransactionID, completion: completion)
     }
     
     //MARK: - Private
