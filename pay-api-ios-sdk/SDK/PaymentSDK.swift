@@ -198,7 +198,9 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     private func configureTokenizationService() {
         let service = CardTokenizationService(with: self.transactionNetworkComponent)
         service.payURLCallback = { [weak self] (payURL, transactionID, externalTransactionID) in
-            self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID)
+            if self?.shouldShowWebPageForTokenizationService == true {
+                self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID)
+            }
         }
         service.createTransactionCallBack = { [weak self] (response) in
             self?.delegate?.paymentSDKDidCreateTransaction(with: response)
