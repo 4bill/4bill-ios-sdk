@@ -86,9 +86,6 @@ enum AnimationDuration {
 //MARK: - Images
 
 enum SDKImage {
-//    static let camera: UIImage? = UIImage(named: "sdk_icon_camera")
-//    static let dropDown: UIImage? = UIImage(named: "sdk_icon_drop_down")
-//    static let info: UIImage? = UIImage(named: "sdk_icon_info")
     static let camera: UIImage? = UIImage(named: "sdk_icon_camera", in: BundleHelper.bundle, with: nil)
     static let dropDown: UIImage? = UIImage(named: "sdk_icon_drop_down", in: BundleHelper.bundle, with: nil)
     static let info: UIImage? = UIImage(named: "sdk_icon_info", in: BundleHelper.bundle, with: nil)
@@ -197,4 +194,13 @@ public enum VerificationCode {
 
 enum Queue: String {
     case transaction = "Queue.transaction"
+}
+
+//MARK: - Services
+
+enum PaymentService {
+    case tokenization
+    case hostToHost
+    case paymentPage
+    case cardToCardTransfer
 }

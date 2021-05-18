@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import Alamofire
 
-enum APIError: Error {
+public enum APIError: Error {
     case noInternet
     case invalidResponse
     case cancelledRequest
@@ -136,7 +137,10 @@ func ErrorValidator(error: Error) -> APIError {
     if error.errorCode == NSURLErrorCancelled {
         return APIError.cancelledRequest
     }
-    
+    if let afError = error as? AFError,
+       let apiError = afError.underlyingError as? APIError {
+        return apiError
+    }
     return APIError.server(errorDescription: nil)
 }
 
@@ -152,6 +156,110 @@ extension APIError: LocalizedError {
             return errorDescription?.text ?? "Object has been deleted"
         case .server(let errorDescription):
             return errorDescription?.text ?? "Server error"
+        case .success(let description):
+            return description
+        case .badRequest(let description):
+            return description
+        case .invalidAuth(let description):
+            return description
+        case .incorrectHeaders(let description):
+            return description
+        case .internalError(let description):
+            return description
+        case .forbiddenIP(let description):
+            return description
+        case .requestsLimitExceeded(let description):
+            return description
+        case .invalidToken(let description):
+            return description
+        case .serverUnavailable(let description):
+            return description
+        case .transparencyTokenIsRequired(let description):
+            return description
+        case .transparencyTokenIsExpired(let description):
+            return description
+        case .transparencyTokenNotFoundInSystem(let description):
+            return description
+        case .transparencyTokenOrExternalTransactionIdNotFoundInSystem(let description):
+            return description
+        case .invalidTransparencyToken(let description):
+            return description
+        case .accountNotFound(let description):
+            return description
+        case .walletNotFound(let description):
+            return description
+        case .notEnoughBalance(let description):
+            return description
+        case .currencyNotSupportedByWallet(let description):
+            return description
+        case .unableToConvertCurrency(let description):
+            return description
+        case .currencyIsRequired(let description):
+            return description
+        case .walletHasReachedServiceLimit(let description):
+            return description
+        case .serviceLimitHasBeenReached(let description):
+            return description
+        case .transactionNotFound(let description):
+            return description
+        case .serviceNotFound(let description):
+            return description
+        case .invalidServiceFieldValue(let description):
+            return description
+        case .transactionWithSuchExternalIdExists(let description):
+            return description
+        case .validationFailed(let description):
+            return description
+        case .reverseCanNotBeDone(let description):
+            return description
+        case .checkMinimumAmount(let description):
+            return description
+        case .checkMaximumAmount(let description):
+            return description
+        case .transactionWithIdNotFound(let description):
+            return description
+        case .serviceNotAllowedForThisWallet(let description):
+            return description
+        case .methodConfirmNotAllowedForThisService(let description):
+            return description
+        case .noServiceCommissionsForThisServiceOrPoint(let description):
+            return description
+        case .serviceLogicIsMissing(let description):
+            return description
+        case .methodUpdateNotAllowedForThisService(let description):
+            return description
+        case .methodPayNotAllowedForThisService(let description):
+            return description
+        case .paymentFailed(let description):
+            return description
+        case .currencyNotSupportedByService(let description):
+            return description
+        case .paymentCreationIsFailed(let description):
+            return description
+        case .incomingTransactionIdIsRequired(let description):
+            return description
+        case .incomingTransactionIsNotFound(let description):
+            return description
+        case .fieldExternalCommissionAmountRequired(let description):
+            return description
+        case .fieldExternalCommissionAmountDoesNotExpected(let description):
+            return description
+        case .cardHasLimitOnCardCreditTransaction(let description):
+            return description
+        case .amountOverholdAmount(let description):
+            return description
+        case .invalidSignature(let description):
+            return description
+        case .cardHasLimitOnMotoTransaction(let description):
+            return description
+        case .rejectedByAntifraud(let description):
+            return description
+        case .unableToRegisterPayment(let description):
+            return description
+        case .unableToConfirmRegisteredPayment(let description):
+            return description
+        case .transactionWithSuchIdAlreadySubmitted(let description):
+            return description
         default:
             return "Server error"
         }

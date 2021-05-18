@@ -10,7 +10,7 @@ import WebKit
 
 protocol WebViewControllerDelegate: class {
         
-    func didReceive(paRes: String?, for transactionID: Int?, md: Int?)
+    func didReceive(paRes: String?, for transactionID: Int?, md: Int?, service: PaymentService)
     
     func didCompleteRedirect(for transactionID: Int?, externalTransactionID: String?)
     
@@ -40,6 +40,8 @@ class WebViewController: BillioBaseViewController {
     var externalTransactionID: String?
     
     var md: Int?
+    
+    var service: PaymentService?
     
     //MARK: - Lifecycle
     
@@ -126,7 +128,10 @@ class WebViewController: BillioBaseViewController {
         if paRes.isEmpty {
             return false
         }
-        self.delegate?.didReceive(paRes: paRes.isEmpty ? nil : paRes, for: self.transactionID, md: md)
+        guard let service = self.service else {
+            return false
+        }
+        self.delegate?.didReceive(paRes: paRes.isEmpty ? nil : paRes, for: self.transactionID, md: md, service: service)
         return true
     }
     

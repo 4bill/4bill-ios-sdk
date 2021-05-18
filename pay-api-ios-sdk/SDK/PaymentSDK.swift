@@ -15,7 +15,7 @@ public protocol PaymentSDKDelegate: class {
     func paymentSDKNeedCodeToProceedHostToHost(transactionID: Int, codeType: VerificationCode)
     
     ///sdk did fail for some reason
-    func paymentSDKDidFail(with error: Error, request: RequestType)
+    func paymentSDKDidFail(with error: APIError, request: RequestType)
     
     ///sdk did finish host-2-host or card tokenization
     func paymentSDKDidFindTransaction(with response: FindTransactionResponseData)
@@ -174,10 +174,10 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     private func configureHostToHostService() {
         let service = HostToHostService(with: self.transactionNetworkComponent)
         service.redirectCallback = { [weak self] (redirectUrl, transactioID) in
-            self?.proceedRedirect(url: redirectUrl, transactionID: transactioID)
+            self?.proceedRedirect(url: redirectUrl, transactionID: transactioID, service: .hostToHost)
         }
         service.htmlRedirectCallback = { [weak self] (html, transactionID, md) in
-            self?.proceedHtmlRedirect(html: html, transactionID: transactionID, md: md)
+            self?.proceedHtmlRedirect(html: html, transactionID: transactionID, md: md, service: .hostToHost)
         }
         service.enterCodeCallback = { [weak self] (transactionID, codeType, completion) in
             (self?.isPaymentNavigationPresented == true ? self?.paymentControllerNavigation : self?.navigation)?.presentEnterForm(title: codeType.title, completion: { (code) in
@@ -199,7 +199,7 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
         let service = CardTokenizationService(with: self.transactionNetworkComponent)
         service.payURLCallback = { [weak self] (payURL, transactionID, externalTransactionID) in
             if self?.shouldShowWebPageForTokenizationService == true {
-                self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID)
+                self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID, service: .tokenization)
             }
         }
         service.createTransactionCallBack = { [weak self] (response) in
@@ -212,7 +212,7 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
         let service = CardTransferService(with: self.transactionNetworkComponent)
         service.payURLCallback = { [weak self] (payURL, transactionID, externalTransactionID) in
             if self?.shouldShowWebPageForCardToCardService == true {
-                self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID)
+                self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID, service: .cardToCardTransfer)
             }
         }
         service.createTransactionCallBack = { [weak self] (response) in
@@ -225,7 +225,7 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
         let service = PaymentPageService(with: self.transactionNetworkComponent)
         service.payURLCallback = { [weak self] (payURL, transactionID, externalTransactionID) in
             if self?.shouldShowWebPageForPaymentPageService == true {
-                self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID)
+                self?.proceedRedirect(url: payURL, transactionID: transactionID, externalTransactionID: externalTransactionID, service: .paymentPage)
             }
         }
         service.createTransactionCallBack = { [weak self] (response) in
@@ -334,16 +334,18 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     
     //MARK: - Private
     
-    private func proceedRedirect(url: URL, transactionID: Int, externalTransactionID: String? = nil) {
+    private func proceedRedirect(url: URL, transactionID: Int, externalTransactionID: String? = nil, service: PaymentService) {
         self.webViewController.url = url
         self.webViewController.transactionID = transactionID
         self.webViewController.externalTransactionID = externalTransactionID
+        self.webViewController.service = service
         (self.isPaymentNavigationPresented ? self.paymentControllerNavigation : self.navigation)?.pushViewController(self.webViewController, animated: true)
     }
     
-    private func proceedHtmlRedirect(html: String, transactionID: Int, md: Int) {
+    private func proceedHtmlRedirect(html: String, transactionID: Int, md: Int, service: PaymentService) {
         self.webViewController.htmlString = html
         self.webViewController.md = md
+        self.webViewController.service = service
         self.webViewController.transactionID = transactionID
         (self.isPaymentNavigationPresented ? self.paymentControllerNavigation : self.navigation)?.pushViewController(self.webViewController, animated: true)
     }
@@ -367,10 +369,12 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
 //MARK: - WebViewControllerDelegate
 extension PaymentSDK: WebViewControllerDelegate {
     
-    func didReceive(paRes: String?, for transactionID: Int?, md: Int?) {
+    func didReceive(paRes: String?, for transactionID: Int?, md: Int?, service: PaymentService) {
         (self.isPaymentNavigationPresented ? self.paymentControllerNavigation : self.navigation)?.popViewController(animated: true)
-        if let pares = paRes, let id = transactionID, let md = md {
-            self.hostToHostService.updateTransaction(paRes: pares, for: id, md: md)
+        if service == .hostToHost {
+            if let pares = paRes, let id = transactionID, let md = md {
+                self.hostToHostService.updateTransaction(paRes: pares, for: id, md: md)
+            }
         }
     }
     
