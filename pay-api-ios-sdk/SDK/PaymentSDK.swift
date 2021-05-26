@@ -74,6 +74,9 @@ public class PaymentSDK: NSObject, NetworkStateProtocol, TransactionUsecase {
     
     //MARK: - Properties
     
+    /// used for host-2-host controller
+    public var logo: UIImage?
+    
     public var locale: Locale = .ua
     
     /// used for 3Ds verification

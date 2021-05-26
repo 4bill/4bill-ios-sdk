@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name               = "PayApiIosSDK"
-  spec.version            = "0.0.5"
+  spec.version            = "0.0.6"
   spec.summary            = "PayApiIosSDK is a framework which provides 4billio payment services implementation to be used in mobile apps"
 
   spec.description        = "PayApiIosSDK is a framework which provides 4billio payment services implementation to be used in mobile apps"

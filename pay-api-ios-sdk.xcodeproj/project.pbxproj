@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8AFA0DBAA954C0092A6FC9EF /* libPods-pay-api-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 858E441A14DDE807578C1E7C /* libPods-pay-api-ios-sdk.a */; };
+		F16E2466265E572C00B60BB1 /* SettlePayLogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E2465265E572C00B60BB1 /* SettlePayLogoTableViewCell.swift */; };
+		F16E246A265E577B00B60BB1 /* BillioPayLogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16E2469265E577B00B60BB1 /* BillioPayLogoTableViewCell.xib */; };
 		F18048D9264D542E003D5340 /* pay_api_ios_sdk.h in Headers */ = {isa = PBXBuildFile; fileRef = F18048D7264D542E003D5340 /* pay_api_ios_sdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1804D06264D70EA003D5340 /* ErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C1E264D70E9003D5340 /* ErrorProtocol.swift */; };
 		F1804D07264D70EA003D5340 /* AutoIndentifierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1804C1F264D70E9003D5340 /* AutoIndentifierCell.swift */; };
@@ -181,6 +183,8 @@
 		858E441A14DDE807578C1E7C /* libPods-pay-api-ios-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pay-api-ios-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39E66ADD1A5D20973282AF7 /* Pods-pay-api-ios-sdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pay-api-ios-sdk.debug.xcconfig"; path = "Target Support Files/Pods-pay-api-ios-sdk/Pods-pay-api-ios-sdk.debug.xcconfig"; sourceTree = "<group>"; };
 		ECDAB08059849714E1415869 /* Pods-pay-api-ios-sdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pay-api-ios-sdk.release.xcconfig"; path = "Target Support Files/Pods-pay-api-ios-sdk/Pods-pay-api-ios-sdk.release.xcconfig"; sourceTree = "<group>"; };
+		F16E2465265E572C00B60BB1 /* SettlePayLogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettlePayLogoTableViewCell.swift; sourceTree = "<group>"; };
+		F16E2469265E577B00B60BB1 /* BillioPayLogoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillioPayLogoTableViewCell.xib; sourceTree = "<group>"; };
 		F18048D4264D542E003D5340 /* pay_api_ios_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pay_api_ios_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18048D7264D542E003D5340 /* pay_api_ios_sdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pay_api_ios_sdk.h; sourceTree = "<group>"; };
 		F18048D8264D542E003D5340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -379,6 +383,14 @@
 				ECDAB08059849714E1415869 /* Pods-pay-api-ios-sdk.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F16E2464265E572000B60BB1 /* BillioPayLogoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F16E2465265E572C00B60BB1 /* SettlePayLogoTableViewCell.swift */,
+			);
+			path = BillioPayLogoTableViewCell;
 			sourceTree = "<group>";
 		};
 		F18048CA264D542E003D5340 = {
@@ -917,6 +929,7 @@
 		F1804CD2264D70EA003D5340 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F16E2464265E572000B60BB1 /* BillioPayLogoTableViewCell */,
 				F1804CD3264D70EA003D5340 /* BillioPayActionButtonTableViewCell */,
 				F1804CD6264D70EA003D5340 /* BillioPayGeneralSumTableViewCell */,
 				F1804CD9264D70EA003D5340 /* BillioPayCardDatesTableViewCell */,
@@ -1098,6 +1111,7 @@
 				F1A55F0A264E793000A55D85 /* BillioPayGeneralSumTableViewCell.xib */,
 				F1A55F0B264E793000A55D85 /* BillioPayGeneralTitleTableViewCell.xib */,
 				F1A55EEE264E759D00A55D85 /* BorderedTextFieldView.xib */,
+				F16E2469265E577B00B60BB1 /* BillioPayLogoTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -1182,6 +1196,7 @@
 				F1804D0B264D70EA003D5340 /* SF-Pro-Display-Thin.otf in Resources */,
 				F1804D0A264D70EA003D5340 /* Roboto-Medium.ttf in Resources */,
 				F1804D14264D70EA003D5340 /* SF-Pro-Display-MediumItalic.otf in Resources */,
+				F16E246A265E577B00B60BB1 /* BillioPayLogoTableViewCell.xib in Resources */,
 				F1A55F10264E793000A55D85 /* BillioPayCardDatesTableViewCell.xib in Resources */,
 				F1804D17264D70EA003D5340 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
 				F1A55F11264E793000A55D85 /* BillioPayCardCVVTableViewCell.xib in Resources */,
@@ -1353,6 +1368,7 @@
 				F1804D41264D70EA003D5340 /* APIConstants.swift in Sources */,
 				F1804DAB264D70EA003D5340 /* CryptoHelper.swift in Sources */,
 				F1804D94264D70EA003D5340 /* BillioPayCardNameTableViewCell.swift in Sources */,
+				F16E2466265E572C00B60BB1 /* SettlePayLogoTableViewCell.swift in Sources */,
 				F1804D46264D70EA003D5340 /* PayTransactionResponseData.swift in Sources */,
 				F1804D49264D70EA003D5340 /* CancelTransactionRequestData.swift in Sources */,
 				F1804D63264D70EA003D5340 /* APIErrorValidator.swift in Sources */,

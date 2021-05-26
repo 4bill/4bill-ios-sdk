@@ -168,7 +168,8 @@ public class BillioPayViewController: BillioBaseViewController {
             BillioPayCardDatesTableViewCell.self,
             BillioPayCardCVVTableViewCell.self,
             BillioPayActionButtonTableViewCell.self,
-            BillioPayCompaniesTableViewCell.self
+            BillioPayCompaniesTableViewCell.self,
+            BillioPayLogoTableViewCell.self
         ])
     }
     

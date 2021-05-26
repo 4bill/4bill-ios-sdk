@@ -36,7 +36,10 @@ extension BillioPayViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         switch cellType {
-        
+        case BillioPayUIViewModel.PaymentGeneralCells.logo:
+            let cell = tableView.getReusableCell(type: BillioPayLogoTableViewCell.self, for: indexPath)!
+            cell.logo = PaymentSDK.shared.logo
+            return cell
         case BillioPayUIViewModel.PaymentGeneralCells.title:
             let title = self.uiViewModel.getTransactionNumberTitle()
             let cell = tableView.getReusableCell(type: BillioPayGeneralTitleTableViewCell.self, for: indexPath)!
