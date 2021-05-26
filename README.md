@@ -223,9 +223,3 @@ func paymentSDKDidFail(with error: Error, request: RequestType)
 PaymentSDK.shared.<имя метода> 
 ```
 
-Ссылки
-Введение в 4bill https://docs.4bill.io/
-Услуга прием платежей (платежная страница) https://docs.4bill.io/services/acquiring_form
-Услуга прием платежей (host-2-host) https://docs.4bill.io/services/acquiring_h2h
-Услуга перевод с карты на карту (платежная страница) https://docs.4bill.io/services/p2p_transfer_form
-Услуга токенизации карты https://docs.4bill.io/services/card_tokenization
